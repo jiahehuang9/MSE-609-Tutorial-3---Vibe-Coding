@@ -70,7 +70,8 @@ What it does:
   in bash:
   -  nano .gitignore
   -  enter the following (using ctrl + o to save and ctrl + x to exit):
-```
+    
+``` gitignore
 # Ignore raw/processed data (but keep placeholder)
 data/*
 !data/.gitkeep
@@ -93,7 +94,6 @@ data/*
 *.utf8.md
 *.knit.md
 cache/
-```
 
 Then:
 git add .gitignore README.md R/ fig/*.png
