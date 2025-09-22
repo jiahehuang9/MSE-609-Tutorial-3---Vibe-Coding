@@ -94,6 +94,7 @@ data/*
 *.utf8.md
 *.knit.md
 cache/
+```
 
 Then:
 git add .gitignore README.md R/ fig/*.png
