@@ -65,3 +65,35 @@ What it does:
 - Creates hourly ride volume plot (how many rides per hour of day).
 - Creates cancel rate plot (by weekday and vehicle type).
 - Saves figures into fig/hourly_volume.png and fig/cancel_rate.png.
+
+  How to commit changes:
+  in bash:
+  -  nano .gitignore
+  -  enter the following (using ctrl + o to save and ctrl + x to exit):
+# Ignore raw/processed data (but keep placeholder)
+data/*
+!data/.gitkeep
+
+# Ignore RStudio temp/session files
+.Rhistory
+.RData
+.Rproj.user
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore generated figures/reports
+!fig/*.png 
+*.html
+*.pdf
+*.docx
+
+# Ignore cache from R Markdown
+*.utf8.md
+*.knit.md
+cache/
+
+Then:
+git add .gitignore README.md R/ fig/*.png
+git commit -m "update README, add R scripts and generated figures"
+git push origin main
