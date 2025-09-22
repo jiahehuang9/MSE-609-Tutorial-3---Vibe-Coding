@@ -35,3 +35,33 @@ install.packages(c(
 
 Dataset: 
 https://www.kaggle.com/datasets/yashdevladdha/uber-ride-analytics-dashboard
+
+
+R/10_mvp_read.R – MVP: Read & Inspect
+- Goal: The minimum viable product. Just load the dataset and confirm it’s readable.
+What it does:
+- Checks if data/ncr_ride_bookings.csv exists.
+- Reads the CSV using readr::read_csv().
+- Prints number of rows and columns.
+- Displays the first 5 rows (head() output).
+- Stops with an error message if the file is missing.
+
+
+R/20_clean.R – Cleaning & Feature Engineering
+- Goal: Transform raw noisy data into a structured dataset ready for analysis.
+What it does:
+- Renames/standardizes columns (request_time, pickup_time, dropoff_time, status, vehicle_type, fare, distance_mi).
+- Parses timestamps (lubridate::ymd_hms) → extracts date, hour, weekday.
+- Normalizes status (e.g. “canceled” vs “cancelled”).
+- Ensures numeric types for fare, distance_mi, etc.
+- Flags invalid data (negative distances, fares, or negative trip durations).
+- Saves the cleaned dataset to data/uber_clean.csv.
+
+
+R/30_eda.R – Exploratory Data Analysis (EDA)
+- Goal: Produce first insights and visualizations.
+What it does:
+- Loads the cleaned dataset (data/uber_clean.csv).
+- Creates hourly ride volume plot (how many rides per hour of day).
+- Creates cancel rate plot (by weekday and vehicle type).
+- Saves figures into fig/hourly_volume.png and fig/cancel_rate.png.

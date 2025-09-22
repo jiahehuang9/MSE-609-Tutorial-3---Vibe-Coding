@@ -1,0 +1,23 @@
+# Ignore raw/processed data (but keep placeholder)
+data/*
+!data/.gitkeep
+
+# Ignore RStudio temp/session files
+.Rhistory
+.RData
+.Rproj.user
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore generated figures/reports
+fig/*
+*.html
+*.pdf
+*.docx
+
+# Ignore cache from R Markdown
+*.utf8.md
+*.knit.md
+cache/
+
