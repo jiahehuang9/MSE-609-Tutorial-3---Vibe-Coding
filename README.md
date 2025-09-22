@@ -7,6 +7,7 @@ The goal: practice the full loop of **Plan → MVP → Debug → Iterate → Del
 
 ---
 ## Project Structure
+```
 uber-vibe-coding-r/
 ├─ data/ # Place Kaggle CSV files here (not tracked by git)
 ├─ R/ # R scripts (MVP, cleaning, EDA, report, model)
@@ -16,6 +17,7 @@ uber-vibe-coding-r/
 ├─ .gitignore
 ├─ README.md
 └─ renv.lock # (optional) reproducible environment file
+```
 
 ---
 ## Prerequisites
