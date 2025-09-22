@@ -97,6 +97,8 @@ cache/
 ```
 
 Then:
+```
 git add .gitignore README.md R/ fig/*.png
 git commit -m "update README, add R scripts and generated figures"
 git push origin main
+```
